@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+h1{
+padding-top: 2rem;
+padding-left: 2rem;
+font-weight: 400;
+margin-bottom: 0;
+}
+h2{
+padding-left: 2rem;
+font-weight: 400;
+margin-top: 0;
+}
+header{
+    background-image: url('./images/header.png');
+    height: 167px;
+    color: #FFFFFF 
+
+}
+.menu-outter{
+    display: flex;
+    gap: 10px;
+    border-bottom:  #D2D2D2 1px solid;
+}
+#menu-emote{
+    font-size: 48px;
+}
+.orderheader{
+    text-align: center;
+    font-size: 28px;
+    max-width: 508px;
+}
+.purchasebtn{
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: #16DB99;
+    border: 1px black solid;
+    width: 508px;
+    height: 60px;
+}
+.cart-menu-outter{
+    display: flex;
+    justify-content: space-between;
+    max-width: 508px;
+}
+.hidden{
+    display: none;
+}
+.totalprice{
+    border-top: black solid 1px;
+}
