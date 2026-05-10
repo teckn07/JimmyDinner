@@ -130,22 +130,41 @@ function render()
 
 render()
 const container = document.querySelector('.container')
+const modal = document.getElementById('modal')
 
 container.addEventListener('click', function(e){
+    console.log(e)
     if(e.target.id)
     {
         menuArray.forEach(function(item){
-            if (e.target.id === "addbtn-" + item.id)
+        if (e.target.id === "addbtn-" + item.id)
         {
             addOrderItem(item.name)
             render()
         }
-        else if (e.target.id === "removebtn-" + item.id)
+        if (e.target.id === "removebtn-" + item.id)
         {
             removeOrderItem(item.name)
             render()
-        }
-})
+        }})
+        
+        if (e.target.id === "purchasebtn")
+            {
+            modal.style.display = 'inline'
+            }
     }
 })
-
+modal.addEventListener('click', function(e){
+    console.log(e)
+    if(e.target.id)
+    {
+            if (e.target.id === "modal-close-btn")
+            {
+            modal.style.display = 'none'
+            }
+            if (e.target.display === 'modal-btn')
+            {
+                modal.style.display = 'none'
+            }
+    }
+})

@@ -24,6 +24,24 @@
             </div>
 
         </main>
+    <div class="modal" id="modal">
+		<div class="close-modal-btn-container">
+			<button class="modal-close-btn" id="modal-close-btn">X</button>
+		</div>
+		<div class="modal-inner" id="modal-inner">
+			<h2>Enter 💳 Details</h2>
+			<p class="modal-text" id="modal-text"></p>
+			<form id="consent-form">
+				<input type="text" name="fullName" placeholder="Enter your full name" required/>
+				<input type="number" name="cardNumber" placeholder="Enter your Card Number" required/>
+                <input type="number" name="cvvNumber" placeholder="Enter CVV" required/>
+				<div class="modal-choice-btns" id="modal-choice-btns">
+					<button type="submit" class="modal-btn">Pay</button>
+				</div>
+
+			</form>
+		</div>
+	</div>    
     <footer>
             
         </footer>
