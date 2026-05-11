@@ -113,7 +113,18 @@ function render()
     document.getElementById('menuout').innerHTML = getMenuItem()
     document.getElementById('orderinfo').innerHTML = getCartItem()
     document.getElementById('totalPrice').innerHTML = getTotalCartPrice()
-    console.log(getTotalCartPrice())
+    //#region working on local storage
+    // if (document.getElementById('orderinfo').innerHTML)
+    // {
+    // localStorage.setItem("myCart", document.getElementById('orderinfo').innerHTML);
+    // localStorage.setItem("myPrice", document.getElementById('totalPrice').innerHTML);
+    // }
+    // if(!document.getElementById('orderinfo').innerHTML)
+    // {
+    // document.getElementById('orderinfo').innerHTML = localStorage.getItem("myCart");
+    // document.getElementById('totalPrice').innerHTML = localStorage.getItem("myPrice");
+    // }
+    //#endregion
     if(itemsarry.length)
     {
         document.getElementById('order').classList.remove('hidden')
@@ -165,6 +176,7 @@ modal.addEventListener('click', function(e){
             if (e.target.display === 'modal-btn')
             {
                 modal.style.display = 'none'
+                
             }
     }
 })
