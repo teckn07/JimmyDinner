@@ -27,7 +27,7 @@ export const menuArray = [
         quantity: 0
     },
         {
-        name: "Drugs",
+        name: "Drugs(not really)",
         ingredients: ["battery acid","toliet bowl cleaner"],
         price: 1000,
         emoji: "💉",
@@ -36,7 +36,7 @@ export const menuArray = [
         quantity: 0
     },
     {
-        name: "Weed",
+        name: "Weed(not really)",
         ingredients: ["cannabis,thc,love"],
         price: 1000,
         emoji: "🌿",
