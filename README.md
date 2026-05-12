@@ -7,8 +7,8 @@ TO DO LIST<br />
 -Fix Cart Div Alignment <br />
 <br />
 -Add an Admin Panel <br />
- -Add\Remove items from menu <br />
- -User login\logout <br />
+ &nbsp; &nbsp;-Add\Remove items from menu <br />
+ &nbsp; &nbsp;-User login\logout <br />
 -When click pay it shows a confirmation where cart was. <br />
 <br />
 <br />
