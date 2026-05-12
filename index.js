@@ -140,6 +140,7 @@ function render()
 }
 
 render()
+
 const container = document.querySelector('.container')
 const modal = document.getElementById('modal')
 

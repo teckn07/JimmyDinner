@@ -1,5 +1,19 @@
-Learning to code with Scrimba this is message is from them :)
+##############
+#            #
+#   TO DO    #
+#    LIST    #
+##############
+-Work on Local Storage
+-Refactor Code to more readable
+-Fix Cart Div Alignment
+-Add an Admin Panel
+ -Add\Remove items from menu
+ -User login\logout
+-When click pay it shows a confirmation where cart was.
 
+
+
+Learning to code with Scrimba this is message is from them :)
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
 If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
