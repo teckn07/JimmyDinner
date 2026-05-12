@@ -174,10 +174,10 @@ modal.addEventListener('click', function(e){
             {
             modal.style.display = 'none'
             }
-            if (e.target.display === 'modal-btn')
-            {
-                modal.style.display = 'none'
-                
-            }
     }
 })
+modal.addEventListener('submit', function(e){
+    console.log(e)
+    e.preventDefault();
+    modal.style.display = 'none'
+    })
