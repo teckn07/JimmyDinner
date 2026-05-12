@@ -1,18 +1,17 @@
-##############
-#            #
-#   TO DO    #
-#    LIST    #
-##############
--Work on Local Storage
--Refactor Code to more readable
--Fix Cart Div Alignment
--Add an Admin Panel
- -Add\Remove items from menu
- -User login\logout
--When click pay it shows a confirmation where cart was.
+#########<br />
+TO DO LIST<br />
+#########
 
-
-
+-Work on Local Storage <br />
+-Refactor Code to more readable <br />
+-Fix Cart Div Alignment <br />
+<br />
+-Add an Admin Panel <br />
+ -Add\Remove items from menu <br />
+ -User login\logout <br />
+-When click pay it shows a confirmation where cart was. <br />
+<br />
+<br />
 Learning to code with Scrimba this is message is from them :)
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
