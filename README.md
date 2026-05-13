@@ -3,7 +3,7 @@ TO DO LIST<br />
 #########
 
 -Work on Local Storage <br />
--Refactor Code to more readable <br />
+-Refactor Code to be more readable <br />
 -Fix Cart Div Alignment <br />
 <br />
 -Add an Admin Panel <br />
