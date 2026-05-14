@@ -103,9 +103,6 @@ input{
     height: 60px;
     margin-top: 1rem;
 }
-#orderdiv{
-
-}
 #completediv{
     display: flex;
     justify-content: center;

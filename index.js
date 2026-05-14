@@ -4,7 +4,7 @@ import  { menuArray } from './data.js'
 let itemsarry = []
 let totalpricearry = []
 
-
+// Gets menu items from menuArry in data.js and add this to the ul menu
 function getMenuItem()
 {
 let menuHtml = ``
@@ -36,7 +36,7 @@ menuArray.forEach(function(item){
 })
     return menuHtml
 }
-
+// Gets Cart Items from menuArry by checking if cartadd = true and add the items to cart-menu-outter div
 function getCartItem()
 {
 let menuHtml = ``
@@ -54,7 +54,6 @@ menuArray.forEach(function(item){
                 <p id="priceqtylabel">$${item.price} QTY:${item.quantity}</p>
                     
         </div>
-    </div>
     `
     itemsarry.push(item)
     }
@@ -62,6 +61,7 @@ menuArray.forEach(function(item){
 })
     return menuHtml
 }
+// Add the total of all items in cart and add them in the totalPrice Div innerhtml
 function getTotalCartPrice(){
     let totalcartprice = 0
     let totalHtml = ``
@@ -80,6 +80,7 @@ function getTotalCartPrice(){
     return totalHtml
 }
 
+// Marks cart add true and add to the qauntity in menuArray.
 function addOrderItem(name)
 {
      menuArray.forEach(function(item){
@@ -91,7 +92,7 @@ function addOrderItem(name)
      })
 }
 
-
+// Removes the item from cart by setting cart add to false and setting qaunity to 0
 function removeOrderItem(name)
 {
      menuArray.forEach(function(item){
@@ -106,7 +107,7 @@ function removeOrderItem(name)
         }
      })
 }
-
+// When click pay in the pay modal it sets the orderdiv to the completediv
 function completePayment(name)
 {
     let completehtml = 
@@ -115,7 +116,7 @@ function completePayment(name)
     `
     return completehtml
 }
-
+// Renders the menu items, total price, and items in card from the fuctions above
 function render()
 {
     document.getElementById('menuout').innerHTML = getMenuItem()
@@ -140,6 +141,7 @@ render()
 const container = document.querySelector('.container')
 const modal = document.getElementById('modal')
 
+//event listener for clicks from the + buttons and checks if they are the right button also purchase button too.
 container.addEventListener('click', function(e){
     console.log(e)
     if(e.target.id)
@@ -162,6 +164,7 @@ container.addEventListener('click', function(e){
             }
     }
 })
+//event listener for the model close button
 modal.addEventListener('click', function(e){
     console.log(e)
     if(e.target.id)
@@ -173,6 +176,8 @@ modal.addEventListener('click', function(e){
             }
     }
 })
+
+//listens for modal submit buttn when paid, it uses the completepayment fuction and reset the items 0 and writes a complete payment message
 modal.addEventListener('submit', function(e){
     var x = document.getElementById("fullName").value;
     console.log(x)
