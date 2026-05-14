@@ -104,5 +104,14 @@ input{
     margin-top: 1rem;
 }
 #orderdiv{
-    border: #16DB99 solid 5px;
+
+}
+#completediv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    color: #065F46;
+    background-color: #ECFDF5;
+    font-size: 32px;
 }

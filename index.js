@@ -107,6 +107,14 @@ function removeOrderItem(name)
      })
 }
 
+function completePayment(name)
+{
+    let completehtml = 
+    `
+    <div id="completediv">Thanks, ${name}! Your order is on its way</div>
+    `
+    return completehtml
+}
 
 function render()
 {
@@ -161,11 +169,21 @@ modal.addEventListener('click', function(e){
             if (e.target.id === "modal-close-btn")
             {
             modal.style.display = 'none'
+            modal.fullName = ''
             }
     }
 })
 modal.addEventListener('submit', function(e){
-    console.log(e)
+    var x = document.getElementById("fullName").value;
+    console.log(x)
     e.preventDefault();
+    document.getElementById('orderinfo').innerHTML = completePayment(x)
     modal.style.display = 'none'
+    document.getElementById('totalPrice').innerHTML = ``
+    document.getElementById('order').classList.add('hidden')
+    document.getElementById('purchasebtn').classList.add('hidden')
+    document.getElementById('totalPrice').classList.add('hidden')
+    document.getElementById("fullName").value = ''
+    document.getElementById("cc-Number").value = ''
+    document.getElementById("ccv-Number").value = ''
     })
