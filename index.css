@@ -43,7 +43,7 @@ header{
     color: white;
     background-color: #16DB99;
     border: 1px black solid;
-    width: 508px;
+    width: 95%;
     height: 60px;
 }
 .cart-menu-outter{
@@ -102,6 +102,9 @@ input{
     width: 475px;
     height: 60px;
     margin-top: 1rem;
+}
+#orderdiv{
+    padding-left: 10%;
 }
 #completediv{
     display: flex;

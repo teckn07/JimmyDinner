@@ -12,7 +12,6 @@ let menuHtml = ``
 menuArray.forEach(function(item){
     menuHtml += 
     `
-    <ul class="Menu">
         <div class="menu-outter">
             <p id="menu-emote">${item.emoji}</p>
             <div id="menuitem-${item.id}">
@@ -31,7 +30,6 @@ menuArray.forEach(function(item){
                 font-size: 30px;">+</button>           
             </div>
         </div>
-    </ul>
     `
 })
     return menuHtml
@@ -141,29 +139,32 @@ render()
 const container = document.querySelector('.container')
 const modal = document.getElementById('modal')
 
-//event listener for clicks from the + buttons and checks if they are the right button also purchase button too.
+//event listener for clicks from the + buttons and checks if they are clicking the right button also purchase button too.
 container.addEventListener('click', function(e){
     console.log(e)
     if(e.target.id)
     {
+        //Plus Button
         menuArray.forEach(function(item){
         if (e.target.id === "addbtn-" + item.id)
         {
             addOrderItem(item.name)
             render()
         }
+        // Remove Button
         if (e.target.id === "removebtn-" + item.id)
         {
             removeOrderItem(item.name)
             render()
         }})
-        
+        // Complete Order Button
         if (e.target.id === "purchasebtn")
             {
             modal.style.display = 'inline'
             }
     }
 })
+
 //event listener for the model close button
 modal.addEventListener('click', function(e){
     console.log(e)
