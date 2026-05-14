@@ -103,3 +103,6 @@ input{
     height: 60px;
     margin-top: 1rem;
 }
+#orderdiv{
+    border: #16DB99 solid 5px;
+}
