@@ -174,3 +174,8 @@ a{
     animation: wiggle 0.5s ease-in-out;
     cursor: default;
 }
+.fa-trash:hover{
+    color: #DC2626;
+    animation: wiggle 0.5s ease-in-out;
+    cursor: pointer;
+}
