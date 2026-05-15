@@ -115,3 +115,62 @@ input{
     background-color: #ECFDF5;
     font-size: 32px;
 }
+.add-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 999px;
+}
+.add-btn:hover{
+    scale: .95;
+    cursor: pointer;
+    background-color: lightgreen;
+}
+.add-btn:active{
+    scale: .8;
+}
+.purchasebtn:hover,.modal-btn:hover{
+    scale: .95;
+    cursor: pointer;
+}
+.purchasebtn:active,.modal-btn:active{
+    scale: .8;
+}
+.menu-outter:hover{
+    background-color: #F3F4F6;
+
+}
+.menu-outter{
+        padding: 0 1rem;
+}
+#menu-emote:hover{
+    animation: wiggle 0.5s ease-in-out;
+    cursor: default;
+}
+#footerp{
+    text-decoration: none;
+    color: #065F46;
+    font-size: 16px;
+    margin: 4rem auto;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+    color: #065F46;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#footerp:hover{
+    animation: wiggle 0.5s ease-in-out;
+    cursor: default;
+}

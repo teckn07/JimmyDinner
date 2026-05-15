@@ -20,12 +20,11 @@ menuArray.forEach(function(item){
                 <p>${item.ingredients}</p>
                 <p>$${item.price}</p>
             </div>
-            <button id="addbtn-${item.id}" style="background-image: url(./images/Ellipse.png);
+            <button class="add-btn" id="addbtn-${item.id}" style="background-image: url(./images/Ellipse.png);
                 margin: auto 0 auto auto;
                 height: 50px;
                 width: 50px;
                 border: none;
-                background-color: transparent;
                 display: grid;
                 place-content: center;
                 font-size: 30px;">+</button>           
