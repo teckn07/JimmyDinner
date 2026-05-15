@@ -45,9 +45,9 @@ function getCartItem()
                 menuHtml += 
                 `
                     <div class="cart-menu-outter">
-                            <h3>${item.name}<button id="removebtn-${item.id}" style="background-color: transparent;
+                            <h3>${item.name}<button class="remove-btn" style="background-color: transparent;
                             border: none;
-                            ">remove</button></h3>
+                            "><i id="removebtn-${item.id}" class="fa-solid fa-trash"></i></button></h3>
 
                             <p id="priceqtylabel">$${item.price} QTY:${item.quantity}</p>
                                 
