@@ -1,8 +1,9 @@
 import  { menuArray } from './data.js'
 
 
-let itemsarry = []
-let totalpricearry = []
+let itemsArry = []
+let totalPriceArry = []
+let localStroageSave = []
 
 // Gets menu items from menuArry in data.js and add this to the ul menu
 function getMenuItem()
@@ -37,28 +38,30 @@ menuArray.forEach(function(item){
 // Gets Cart Items from menuArry by checking if cartadd = true and add the items to cart-menu-outter div
 function getCartItem()
 {
-let menuHtml = ``
+    let menuHtml = ``
 
-menuArray.forEach(function(item){
-    if(item.cartadd == true)
-    {
-    menuHtml += 
-    `
-        <div class="cart-menu-outter">
-                <h3>${item.name}<button id="removebtn-${item.id}" style="background-color: transparent;
-                border: none;
-                ">remove</button></h3>
+        menuArray.forEach(function(item){
+                if(item.cartadd == true)
+                {
+                menuHtml += 
+                `
+                    <div class="cart-menu-outter">
+                            <h3>${item.name}<button id="removebtn-${item.id}" style="background-color: transparent;
+                            border: none;
+                            ">remove</button></h3>
 
-                <p id="priceqtylabel">$${item.price} QTY:${item.quantity}</p>
-                    
-        </div>
-    `
-    itemsarry.push(item)
-    }
+                            <p id="priceqtylabel">$${item.price} QTY:${item.quantity}</p>
+                                
+                    </div>
+                `
+                itemsArry.push(item)
+                }
 
-})
+            })
+
     return menuHtml
 }
+
 // Add the total of all items in cart and add them in the totalPrice Div innerhtml
 function getTotalCartPrice(){
     let totalcartprice = 0
@@ -86,8 +89,10 @@ function addOrderItem(name)
         {
             item.cartadd = true
             item.quantity++
+            localStroageSave.push(item)
         }
      })
+     menuSave(localStroageSave)
 }
 
 // Removes the item from cart by setting cart add to false and setting qaunity to 0
@@ -100,8 +105,8 @@ function removeOrderItem(name)
             item.quantity = 0
             console.log(item.name + item.cartadd + item.quantity)
             const itemToRemove = item;
-            const newArray = itemsarry.filter(item => item !== itemToRemove);
-            itemsarry = newArray;
+            const newArray = itemsArry.filter(item => item !== itemToRemove);
+            itemsArry = newArray;
         }
      })
 }
@@ -120,13 +125,13 @@ function render()
     document.getElementById('menuout').innerHTML = getMenuItem()
     document.getElementById('orderinfo').innerHTML = getCartItem()
     document.getElementById('totalPrice').innerHTML = getTotalCartPrice()
-    if(itemsarry.length)
+    if(itemsArry.length)
     {
         document.getElementById('order').classList.remove('hidden')
         document.getElementById('purchasebtn').classList.remove('hidden')
         document.getElementById('totalPrice').classList.remove('hidden')
     }
-    else if(itemsarry.length === 0)
+    else if(itemsArry.length === 0)
     {
         document.getElementById('order').classList.add('hidden')
         document.getElementById('purchasebtn').classList.add('hidden')
@@ -134,7 +139,24 @@ function render()
     }
 }
 
+// Loads local store
+function menuLoad(){
+    const storedData = localStorage.getItem('savedData');
+    const loadedArray = storedData ? JSON.parse(storedData) : [];
+    return loadedArray
+}
+// Saves item in cart to local store
+function menuSave(data){
+    localStorage.setItem('savedData', JSON.stringify(data));
+}
+// Clears Storage data
+function cleardata(){
+    localStorage.clear();
+}
+
 render()
+//cleardata()
+console.log(menuLoad())
 
 const container = document.querySelector('.container')
 const modal = document.getElementById('modal')

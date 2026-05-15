@@ -2,9 +2,9 @@
 TO DO LIST<br />
 #########
 
--Work on Local Storage <br />
--Refactor Code to be more readable <br />
--Fix Cart Div Alignment <br />
+-Work on Local Storage<br />
+-~~~Refactor Code to be more readable~~ DONE <br />
+-~~~Fix Cart Div Alignment~~~ DONE <br />
 <br />
 -Add an Admin Panel <br />
  &nbsp; &nbsp;-Add\Remove items from menu <br />
