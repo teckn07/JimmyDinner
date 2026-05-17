@@ -160,8 +160,6 @@ function cleardata(){
 
 render()
 loadpage()
-//cleardata()
-console.log(menuLoad())
 
 const container = document.querySelector('.container')
 const modal = document.getElementById('modal')
