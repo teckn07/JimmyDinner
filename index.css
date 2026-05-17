@@ -5,6 +5,8 @@ body {
     font-style: normal;
     max-width: 600px;
     margin: 0 auto;
+    background-color: #111827;
+    color: #F9FAFB;
 
 }
 h1{
@@ -139,7 +141,7 @@ input{
     scale: .8;
 }
 .menu-outter:hover{
-    background-color: #F3F4F6;
+    background-color: #1F2937;
 
 }
 .menu-outter{

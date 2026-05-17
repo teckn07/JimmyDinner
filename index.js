@@ -11,6 +11,7 @@ function getMenuItem()
 let menuHtml = ``
 
 menuArray.forEach(function(item){
+    
     menuHtml += 
     `
         <div class="menu-outter">
@@ -27,10 +28,13 @@ menuArray.forEach(function(item){
                 border: none;
                 display: grid;
                 place-content: center;
-                font-size: 30px;">+</button>           
+                font-size: 30px;
+                color: #F9FAFB;
+                ">+</button>           
             </div>
         </div>
     `
+
 })
     return menuHtml
 }
@@ -89,6 +93,16 @@ function addOrderItem(name)
             item.cartadd = true
             item.quantity++
             localStroageSave.push(item)
+            document.getElementById('addbtn-'+item.id).innerHTML = `<img src="./images/tenor.gif"
+            style="
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            "
+            >`
+               setTimeout(function() {
+            document.getElementById('addbtn-'+item.id).innerHTML = `+`
+            }, 2000);
         }
      })
      menuSave(localStroageSave)
@@ -121,7 +135,6 @@ function completePayment(name)
 // Renders the menu items, total price, and items in card from the fuctions above
 function render()
 {
-    document.getElementById('menuout').innerHTML = getMenuItem()
     document.getElementById('orderinfo').innerHTML = getCartItem()
     document.getElementById('totalPrice').innerHTML = getTotalCartPrice()
     if(itemsArry.length)
@@ -137,7 +150,9 @@ function render()
         document.getElementById('totalPrice').classList.add('hidden')
     }
 }
-
+function loadpage(){
+        document.getElementById('menuout').innerHTML = getMenuItem()
+}
 // Loads local store
 function menuLoad(){
     const storedData = localStorage.getItem('savedData');
@@ -154,6 +169,7 @@ function cleardata(){
 }
 
 render()
+loadpage()
 //cleardata()
 console.log(menuLoad())
 
