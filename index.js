@@ -93,16 +93,6 @@ function addOrderItem(name)
             item.cartadd = true
             item.quantity++
             localStroageSave.push(item)
-            document.getElementById('addbtn-'+item.id).innerHTML = `<img src="./images/tenor.gif"
-            style="
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            "
-            >`
-               setTimeout(function() {
-            document.getElementById('addbtn-'+item.id).innerHTML = `+`
-            }, 2000);
         }
      })
      menuSave(localStroageSave)
